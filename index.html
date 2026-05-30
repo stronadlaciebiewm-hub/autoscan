@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoScan | Premium Used Cars</title>
+    <meta name="description"
+        content="AutoScan - Twoje Auto Premium. Używane samochody premium w Gorzowie Wielkopolskim.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Model Viewer for 3D elements -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="logo.jpg" alt="AutoScan Logo" class="site-logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#hero">Start</a></li>
+                <li><a href="#oferta">Oferta</a></li>
+                <li><a href="#dlaczego-my">Dlaczego My</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Wrapper for SVG background -->
+    <div class="page-wrapper">
+
+        <!-- The Winding Road SVG -->
+        <svg id="scroll-svg"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none;">
+            <path id="road-path" fill="none" stroke="#1E90FF" stroke-width="6" stroke-linecap="round" />
+        </svg>
+
+        <!-- Main Content -->
+        <div class="content-wrapper">
+
+            <!-- Hero Section -->
+            <section id="hero" class="hero section">
+                <div class="container hero-container">
+                    <div class="hero-content" style="text-align: right; display: flex; flex-direction: column; align-items: flex-end;">
+                        <h1 class="hero-title">AutoScan<br><span class="accent-text">Znajdź swoje wymarzone auto</span></h1>
+                        <p class="hero-subtitle"><i class="fas fa-map-marker-alt"></i> Gorzów Wielkopolski</p>
+                        <div class="hero-buttons">
+                            <a href="#oferta" class="btn btn-primary wow-btn">Zobacz ofertę</a>
+                            <a href="#kontakt" class="btn btn-secondary wow-btn">Umów wizytę</a>
+                        </div>
+                    </div>
+                    <div class="hero-image-wrapper">
+                        <!-- 
+                          Instrukcja: 
+                          1. Wejdź na Sketchfab pod link: https://sketchfab.com/3d-models/bmw-m4csl-b53782a00cc240a191d5d7d005af1423a
+                          2. Jeśli model ma przycisk "Download 3D Model", pobierz go w formacie "glTF" lub "GLB".
+                          3. Wypakuj plik i wrzuć do folderu projektu plik .glb zmieniając jego nazwę na "bmw.glb".
+                          Gotowe! Nasz system obracania przy scrollu zadziała automatycznie dla tego BMW!
+                        -->
+                        <model-viewer 
+                            id="rotating-car" 
+                            class="rotating-car-3d" 
+                            src="bmw.glb" 
+                            camera-orbit="-45deg 75deg 3m" 
+                            environment-image="neutral"
+                            shadow-intensity="1"
+                            exposure="1.2"
+                            disable-zoom
+                            disable-pan>
+                        </model-viewer>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Cars -->
+            <section id="oferta" class="oferta section">
+                <div class="container">
+                    <h2 class="section-title">Polecane <span class="accent-text">Pojazdy</span></h2>
+                    <div class="cars-grid">
+
+                        <!-- Car 1 -->
+                        <div class="car-card reveal">
+                            <div class="car-photo placeholder-photo">
+                                <i class="fas fa-car-side"></i>
+                                <span>Zdjęcie pojazdu</span>
+                            </div>
+                            <div class="car-info">
+                                <h3>BMW Seria 5 G30</h3>
+                                <p class="car-specs">2019 • 125 000 km • Diesel</p>
+                                <div class="car-price">145 900 PLN</div>
+                                <a href="#kontakt" class="btn btn-outline w-100">Sprawdź</a>
+                            </div>
+                        </div>
+
+                        <!-- Car 2 -->
+                        <div class="car-card reveal" style="transition-delay: 0.1s;">
+                            <div class="car-photo placeholder-photo">
+                                <i class="fas fa-car-side"></i>
+                                <span>Zdjęcie pojazdu</span>
+                            </div>
+                            <div class="car-info">
+                                <h3>Audi A6 C8 S-Line</h3>
+                                <p class="car-specs">2020 • 98 000 km • Benzyna</p>
+                                <div class="car-price">189 000 PLN</div>
+                                <a href="#kontakt" class="btn btn-outline w-100">Sprawdź</a>
+                            </div>
+                        </div>
+
+                        <!-- Car 3 -->
+                        <div class="car-card reveal" style="transition-delay: 0.2s;">
+                            <div class="car-photo placeholder-photo">
+                                <i class="fas fa-car-side"></i>
+                                <span>Zdjęcie pojazdu</span>
+                            </div>
+                            <div class="car-info">
+                                <h3>Mercedes E-Class W213</h3>
+                                <p class="car-specs">2018 • 150 000 km • Diesel</p>
+                                <div class="car-price">135 500 PLN</div>
+                                <a href="#kontakt" class="btn btn-outline w-100">Sprawdź</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why Us -->
+            <section id="dlaczego-my" class="why-us section">
+                <div class="container">
+                    <h2 class="section-title text-center">Dlaczego <span class="accent-text">AutoScan?</span></h2>
+                    <div class="features-grid">
+
+                        <div class="feature-box reveal">
+                            <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                            <h3>Sprawdzone auta</h3>
+                            <p>Każdy pojazd przechodzi rygorystyczną kontrolę techniczną i blacharską przed sprzedażą.
+                            </p>
+                        </div>
+
+                        <div class="feature-box reveal" style="transition-delay: 0.1s;">
+                            <div class="feature-icon"><i class="fas fa-stopwatch"></i></div>
+                            <h3>Szybka sprzedaż</h3>
+                            <p>Minimum formalności. Pomagamy w załatwieniu leasingu i kredytu na miejscu.</p>
+                        </div>
+
+                        <div class="feature-box reveal" style="transition-delay: 0.2s;">
+                            <div class="feature-icon"><i class="fas fa-sync-alt"></i></div>
+                            <h3>Zamiana</h3>
+                            <p>Przyjmujemy auta w rozliczeniu. Bezpieczna i szybka wycena Twojego obecnego samochodu.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact -->
+            <section id="kontakt" class="contact section">
+                <div class="container">
+                    <h2 class="section-title text-center">Skontaktuj się <span class="accent-text">z nami</span></h2>
+                    <div class="contact-grid">
+                        
+                        <!-- Contact Details -->
+                        <div class="contact-details reveal">
+                            <div class="contact-card">
+                                <div class="icon-wrapper">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <span>Zadzwoń do nas</span>
+                                    <strong>+48 123 456 789</strong>
+                                </div>
+                            </div>
+
+                            <div class="contact-card">
+                                <div class="icon-wrapper">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <span>Odwiedź nasz salon</span>
+                                    <strong>Gorzów Wielkopolski</strong>
+                                </div>
+                            </div>
+
+                            <div class="contact-card">
+                                <div class="icon-wrapper">
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <span>Nasz Instagram</span>
+                                    <a href="https://www.instagram.com/autoscan77" target="_blank"><strong>@autoscan77</strong></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contact Form -->
+                        <div class="contact-form-wrapper reveal" style="transition-delay: 0.2s;">
+                            <form class="glass-form">
+                                <h3>Zostaw wiadomość</h3>
+                                <div class="input-group">
+                                    <input type="text" required placeholder="Imię i nazwisko">
+                                </div>
+                                <div class="input-group">
+                                    <input type="tel" required placeholder="Numer telefonu">
+                                </div>
+                                <div class="input-group">
+                                    <textarea required placeholder="W czym możemy pomóc?" rows="4"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary wow-btn w-100">Wyślij wiadomość</button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer>
+                <div class="container footer-content">
+                    <img src="logo.jpg" alt="AutoScan Logo" class="footer-logo">
+                    <p>&copy; 2026 AutoScan Premium Cars. Wszelkie prawa zastrzeżone.</p>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
