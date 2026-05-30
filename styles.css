@@ -615,27 +615,41 @@ footer::before {
     .hero-container {
         flex-direction: column;
         text-align: center;
-        gap: 2rem;
+        gap: 1rem;
     }
 
     .hero-content {
-        align-items: center !important;
-        text-align: center !important;
+        display: contents !important;
+    }
+
+    .hero-title {
+        order: 1;
+        margin-bottom: 0;
     }
 
     .hero-subtitle {
+        order: 2;
         justify-content: center;
+        margin-bottom: 0;
+    }
+
+    .hero-image-wrapper {
+        order: 3;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .hero-buttons {
+        order: 4;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
     }
 
     .rotating-car-3d {
         height: 400px;
         max-width: 100%;
         transform: scale(1);
-    }
-    .hero-buttons {
-        justify-content: center;
-        flex-direction: column;
-        width: 100%;
     }
     .hero-buttons .btn {
         width: 100%;
