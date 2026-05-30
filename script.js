@@ -66,8 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Baza kąta: zaczynamy od -45 stopni
             const baseAngle = -45;
-            // Prędkość obrotu na pixel scrollowania
-            const scrollFactor = 0.15;
+            // Prędkość obrotu: inna dla urządzeń mobilnych (gdzie scrolluje się więcej pikseli)
+            const isMobile = window.innerWidth <= 768;
+            const scrollFactor = isMobile ? 0.2 : 0.35;
             
             const newAngle = baseAngle + (scrollPosition * scrollFactor);
             
@@ -102,6 +103,38 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => {
         revealObserver.observe(el);
     });
+
+    // --- MOBILE MENU ---
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (mobileMenuBtn && navLinks) {
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (icon) {
+                if (navLinks.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            }
+        });
+        
+        // Zamykanie menu po kliknięciu w link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                if (icon) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        });
+    }
 
     // --- SMOOTH SCROLL FOR ANCHOR LINKS ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
