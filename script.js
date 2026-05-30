@@ -72,8 +72,8 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const newAngle = baseAngle + (scrollPosition * scrollFactor);
             
-            // Format: theta phi radius (np. "45deg 75deg 3m")
-            rotatingCar3D.setAttribute('camera-orbit', `${newAngle}deg 75deg 3m`);
+            // Format: theta phi radius (np. "45deg 75deg auto") - auto pozwala na automatyczne dopasowanie odległości do wielkości nowego modelu
+            rotatingCar3D.setAttribute('camera-orbit', `${newAngle}deg 75deg auto`);
         };
         
         window.addEventListener('scroll', updateCarRotation);
