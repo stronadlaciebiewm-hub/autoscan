@@ -49,8 +49,10 @@
             <!-- Hero Section -->
             <section id="hero" class="hero section">
                 <div class="container hero-container">
-                    <div class="hero-content" style="text-align: right; display: flex; flex-direction: column; align-items: flex-end;">
-                        <h1 class="hero-title">AutoScan<br><span class="accent-text">Znajdź swoje wymarzone auto</span></h1>
+                    <div class="hero-content"
+                        style="text-align: right; display: flex; flex-direction: column; align-items: flex-end;">
+                        <h1 class="hero-title">AutoScan<br><span class="accent-text">Znajdź swoje wymarzone auto</span>
+                        </h1>
                         <p class="hero-subtitle"><i class="fas fa-map-marker-alt"></i> Gorzów Wielkopolski</p>
                         <div class="hero-buttons">
                             <a href="#oferta" class="btn btn-primary wow-btn">Zobacz ofertę</a>
@@ -65,18 +67,9 @@
                           3. Wypakuj plik i wrzuć do folderu projektu plik .glb zmieniając jego nazwę na "bmw.glb".
                           Gotowe! Nasz system obracania przy scrollu zadziała automatycznie dla tego BMW!
                         -->
-                        <model-viewer 
-                            id="rotating-car" 
-                            class="rotating-car-3d" 
-                            src="bmw.glb" 
-                            camera-orbit="-45deg 75deg auto" 
-                            camera-target="auto auto auto"
-                            environment-image="neutral"
-                            shadow-intensity="1"
-                            exposure="1.2"
-                            camera-controls
-                            disable-zoom
-                            disable-pan>
+                        <model-viewer id="rotating-car" class="rotating-car-3d" src="bmw.glb"
+                            camera-orbit="-45deg 75deg auto" camera-target="auto auto auto" environment-image="neutral"
+                            shadow-intensity="1" exposure="1.2" camera-controls disable-zoom disable-pan>
                         </model-viewer>
                     </div>
                 </div>
@@ -85,48 +78,49 @@
             <!-- Featured Cars -->
             <section id="oferta" class="oferta section">
                 <div class="container">
-                    <h2 class="section-title">Polecane <span class="accent-text">Pojazdy</span></h2>
+                    <h2 class="section-title text-center hot-deals-title">HOT <span class="deals-highlight">DEALS</span>
+                    </h2>
                     <div class="cars-grid">
 
                         <!-- Car 1 -->
                         <div class="car-card reveal">
                             <div class="car-photo placeholder-photo">
-                                <i class="fas fa-car-side"></i>
-                                <span>Zdjęcie pojazdu</span>
+                                <i class="fas fa-camera"></i>
+                                <span></span>
                             </div>
                             <div class="car-info">
                                 <h3>BMW Seria 5 G30</h3>
                                 <p class="car-specs">2019 • 125 000 km • Diesel</p>
                                 <div class="car-price">145 900 PLN</div>
-                                <a href="#kontakt" class="btn btn-outline w-100">Sprawdź</a>
+                                <a href="#kontakt" class="btn btn-primary wow-btn w-100">Zarezerwuj</a>
                             </div>
                         </div>
 
                         <!-- Car 2 -->
                         <div class="car-card reveal" style="transition-delay: 0.1s;">
                             <div class="car-photo placeholder-photo">
-                                <i class="fas fa-car-side"></i>
-                                <span>Zdjęcie pojazdu</span>
+                                <i class="fas fa-camera"></i>
+                                <span></span>
                             </div>
                             <div class="car-info">
                                 <h3>Audi A6 C8 S-Line</h3>
                                 <p class="car-specs">2020 • 98 000 km • Benzyna</p>
                                 <div class="car-price">189 000 PLN</div>
-                                <a href="#kontakt" class="btn btn-outline w-100">Sprawdź</a>
+                                <a href="#kontakt" class="btn btn-primary wow-btn w-100">Zarezerwuj</a>
                             </div>
                         </div>
 
                         <!-- Car 3 -->
                         <div class="car-card reveal" style="transition-delay: 0.2s;">
                             <div class="car-photo placeholder-photo">
-                                <i class="fas fa-car-side"></i>
-                                <span>Zdjęcie pojazdu</span>
+                                <i class="fas fa-camera"></i>
+                                <span></span>
                             </div>
                             <div class="car-info">
                                 <h3>Mercedes E-Class W213</h3>
                                 <p class="car-specs">2018 • 150 000 km • Diesel</p>
                                 <div class="car-price">135 500 PLN</div>
-                                <a href="#kontakt" class="btn btn-outline w-100">Sprawdź</a>
+                                <a href="#kontakt" class="btn btn-primary wow-btn w-100">Zarezerwuj</a>
                             </div>
                         </div>
 
@@ -168,57 +162,39 @@
             <section id="kontakt" class="contact section">
                 <div class="container">
                     <h2 class="section-title text-center">Skontaktuj się <span class="accent-text">z nami</span></h2>
-                    <div class="contact-grid">
-                        
-                        <!-- Contact Details -->
-                        <div class="contact-details reveal">
-                            <div class="contact-card">
-                                <div class="icon-wrapper">
-                                    <i class="fas fa-phone-alt"></i>
-                                </div>
-                                <div class="contact-text">
-                                    <span>Zadzwoń do nas</span>
-                                    <strong>+48 123 456 789</strong>
-                                </div>
-                            </div>
+                    <div class="contact-cards-container">
 
-                            <div class="contact-card">
-                                <div class="icon-wrapper">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div class="contact-text">
-                                    <span>Odwiedź nasz salon</span>
-                                    <strong>Gorzów Wielkopolski</strong>
-                                </div>
+                        <a href="tel:+48123456789" class="contact-card reveal">
+                            <div class="icon-wrapper">
+                                <i class="fas fa-phone-alt"></i>
                             </div>
-
-                            <div class="contact-card">
-                                <div class="icon-wrapper">
-                                    <i class="fab fa-instagram"></i>
-                                </div>
-                                <div class="contact-text">
-                                    <span>Nasz Instagram</span>
-                                    <a href="https://www.instagram.com/autoscan77" target="_blank"><strong>@autoscan77</strong></a>
-                                </div>
+                            <div class="contact-text">
+                                <span>Zadzwoń do nas</span>
+                                <strong>+48 123 456 789</strong>
                             </div>
-                        </div>
+                        </a>
 
-                        <!-- Contact Form -->
-                        <div class="contact-form-wrapper reveal" style="transition-delay: 0.2s;">
-                            <form class="glass-form">
-                                <h3>Zostaw wiadomość</h3>
-                                <div class="input-group">
-                                    <input type="text" required placeholder="Imię i nazwisko">
-                                </div>
-                                <div class="input-group">
-                                    <input type="tel" required placeholder="Numer telefonu">
-                                </div>
-                                <div class="input-group">
-                                    <textarea required placeholder="W czym możemy pomóc?" rows="4"></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary wow-btn w-100">Wyślij wiadomość</button>
-                            </form>
-                        </div>
+                        <a href="https://maps.google.com/?q=Gorzów+Wielkopolski" target="_blank"
+                            class="contact-card reveal" style="transition-delay: 0.1s;">
+                            <div class="icon-wrapper">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span>Odwiedź nasz salon</span>
+                                <strong>Gorzów Wielkopolski</strong>
+                            </div>
+                        </a>
+
+                        <a href="https://www.instagram.com/autoscan77" target="_blank" class="contact-card reveal"
+                            style="transition-delay: 0.2s;">
+                            <div class="icon-wrapper">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span>Nasz Instagram</span>
+                                <strong>@autoscan77</strong>
+                            </div>
+                        </a>
 
                     </div>
                 </div>
